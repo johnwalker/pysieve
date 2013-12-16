@@ -69,7 +69,7 @@ def generate_smooth(number, factor_base):
                 for root in roots:
                         s = math.ceil(start / factor) * factor - start
                         for ind in [s-root,s+root]:
-                                index = ind
+                                index = int(ind) # for python2
                                 while index < end - start:
                                         if 0 <= index:
                                                 sieve[index] = factor_out(sieve[index], factor)
